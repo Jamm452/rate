@@ -11,6 +11,9 @@ public interface RateService {
     @GetMapping("latest.json?app_id=${rates.pass}")
     Rate getLatestRates();
 
+    @GetMapping("latest.json?app_id=${rates.pass}&base={value}")
+    Rate getLatestRates(@PathVariable("value") String value);
+
     @GetMapping("historical/{date}.json?app_id=${rates.pass}")
     Rate getHistoricalRates(@PathVariable("date") String yesterday);
 }
