@@ -19,7 +19,7 @@ import java.util.Map;
 public class MyController {
 
     final String YESTERDAY = LocalDate.now().minusDays(1L)
-            .format(DateTimeFormatter.ofPattern("yyy-MM-dd"));
+            .format(DateTimeFormatter.ofPattern("yyyy-MM-dd"));
 
     @Autowired
     private RateService rateService;
